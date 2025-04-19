@@ -1,7 +1,6 @@
-# js-campominato-dom
+# Space adventure game
 
 Gioco: Campo Minato
-nome repo: js-campominato-dom
 
 Milestone I
 L'utente clicca su un bottone che genererà una griglia di gioco quadrata.
