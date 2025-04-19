@@ -1,0 +1,382 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  position: relative;
+  background-color: #1f054e;
+  overflow: hidden;
+  font-size: 16px;
+}
+
+body {
+  width: 100%;
+  font-family: "Audiowide", cursive;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.navicella {
+  position: absolute;
+  bottom: -162px;
+  left: 50%;
+  width: 0px;
+  animation-name: viaggioSpace;
+  animation-duration: 4s;
+  z-index: 10;
+}
+
+@keyframes viaggioSpace {
+  0% {
+    bottom: 6px;
+    width: 28px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  25% {
+    bottom: 20vh;
+    width: 10vw;
+    max-width: 173px;
+    transform: translateX(-30%);
+  }
+  50% {
+    bottom: 50vh;
+    width: 8vw;
+    max-width: 150px;
+    transform: translateX(-10%);
+    opacity: 1;
+  }
+  100% {
+    bottom: 90vh;
+    width: 0px;
+    transform: translateX(20%);
+    opacity: 0;
+  }
+}
+
+.navicella img {
+  width: 100%;
+  height: auto;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  height: auto;
+  min-height: 13vh;
+  background-color: #210955;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+  z-index: 100;
+}
+
+h1 {
+  font-size: clamp(1.5rem, 5vw, 3rem);
+  margin-right: 1rem;
+  color: #efe9f5;
+}
+
+h2 {
+  color: #efe9f5;
+  margin-right: 0.5rem;
+  font-size: clamp(1rem, 2vw, 1.6rem);
+}
+
+h3 {
+  letter-spacing: 2px;
+  font-size: clamp(0.9rem, 2vw, 1.2rem);
+}
+
+h5 {
+  font-weight: 400;
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.intestazione-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15rem;
+}
+
+.levels-buttons {
+  display: flex;
+  gap: 3rem;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: clamp(35px, 4vw, 52px);
+  margin-right: 0.6rem;
+  flex-shrink: 0;
+}
+
+.logo img {
+  width: 100%;
+  height: auto;
+}
+
+.levels {
+  display: flex;
+  align-items: center;
+  margin-right: 0.8rem;
+}
+
+.select-selected {
+  background-color: #210955;
+  color: #efe9f5;
+  border: 1px solid #efe9f570;
+  border-radius: 10px;
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+  font-family: inherit;
+  padding: 0.4rem;
+}
+
+#levels {
+  padding-right: 2rem;
+}
+
+.bottoniStartReset {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn,
+.reset {
+  width: clamp(80px, 10vw, 108px);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.btn:hover,
+.reset:hover {
+  transform: scale(1.05);
+}
+
+main {
+  width: 100%;
+  min-height: 75vh;
+  background-image: url(../img/sfondoSpace.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-top: 15vh;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.risultato {
+  text-align: center;
+  background-color: #250d63;
+  color: white;
+  padding: 0.5rem;
+  min-height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.griglia {
+  width: min(72vh, 90vw);
+  height: min(72vh, 90vw);
+  aspect-ratio: 1/1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.stopClick {
+  pointer-events: none;
+}
+
+.cella {
+  background-color: #1f0043cc;
+  width: calc((100% / 10) - 4px);
+  height: calc((100% / 10) - 4px);
+  border: 1px solid #7e65ebcf;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  margin: 2px;
+  color: #c9b3da;
+  -webkit-box-shadow: 0px 0px 11px -3px #ffffff70;
+  box-shadow: 0px 0px 11px -3px #ffffff70;
+}
+
+.cella-medium {
+  background-color: #1f0043cc;
+  border-radius: 8px;
+  margin: 2px;
+  width: calc((100% / 9) - 4px);
+  height: calc((100% / 9) - 4px);
+  border: 1px solid #7e65ebcf;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #c9b3da;
+  -webkit-box-shadow: 0px 0px 11px -3px #ffffff70;
+  box-shadow: 0px 0px 11px -3px #ffffff70;
+}
+
+.cella-hard {
+  background-color: #1f0043cc;
+  border-radius: 8px;
+  margin: 2px;
+  width: calc((100% / 7) - 4px);
+  height: calc((100% / 7) - 4px);
+  border: 1px solid #7e65ebcf;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #c9b3da;
+  -webkit-box-shadow: 0px 0px 11px -3px #ffffff70;
+  box-shadow: 0px 0px 11px -3px #ffffff70;
+}
+
+.cellaCliccata {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(../img/star.png);
+}
+
+.cellaCliccataBomba {
+  background-image: url(../img/meteoriteUno.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #2d125c;
+}
+
+footer {
+  width: 100%;
+  min-height: 5vh;
+  background-color: #1f054e;
+  color: #9993a5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 0;
+}
+
+.dati {
+  text-align: center;
+}
+
+/* Updated media queries */
+@media (max-width: 1352px) {
+  .intestazione-container {
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 1095px) {
+  h1 {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    min-height: 17vh;
+  }
+
+  main {
+    margin-top: 15vh;
+  }
+
+  .levels {
+    margin: 0.5rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    min-height: 20vh;
+    padding: 0.5rem 0;
+  }
+
+  .intestazione-container {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  main {
+    margin-top: 20vh;
+  }
+
+  .bottoniStartReset {
+    margin-top: 0.5rem;
+  }
+
+  .cellaCliccata,
+  .cellaCliccataBomba {
+    background-size: 80%;
+  }
+}
+
+@media (max-height: 600px) {
+  header {
+    position: relative;
+    min-height: auto;
+  }
+
+  main {
+    margin-top: 1rem;
+    min-height: 60vh;
+  }
+
+  .griglia {
+    width: min(60vh, 80vw);
+    height: min(60vh, 80vw);
+  }
+}
+
+@media (orientation: landscape) and (max-height: 500px) {
+  header {
+    position: relative;
+    min-height: auto;
+  }
+
+  .intestazione-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  main {
+    margin-top: 0;
+  }
+
+  .griglia {
+    width: min(60vh, 70vw);
+    height: min(60vh, 70vw);
+  }
+}
