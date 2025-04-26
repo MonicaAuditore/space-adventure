@@ -380,3 +380,64 @@ footer {
     height: min(60vh, 70vw);
   }
 }
+
+@media (max-width: 482px) {
+  .levels {
+    flex-direction: column;
+  }
+
+  .btn.start,
+  .reset {
+    width: 4rem;
+    height: 3rem;
+  }
+
+  .bottoniStartReset {
+    gap: 1.5rem;
+  }
+
+  .levels-buttons {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 354px) {
+  .bottoniStartReset {
+    gap: 0.5rem;
+  }
+
+  .levels-buttons {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 288px) {
+  .logo {
+    display: none;
+  }
+
+  h1 {
+    margin-right: 0rem;
+  }
+
+  .btn.start,
+  .reset {
+    width: 3rem;
+    height: 2rem;
+  }
+
+  .bottoniStartReset {
+    flex-direction: column;
+  }
+
+  .cella {
+    padding: 13px;
+    border-radius: 5px;
+    width: calc((100% / 10) - -7px);
+  }
+
+  .main {
+    align-items: flex-start;
+  }
+}
